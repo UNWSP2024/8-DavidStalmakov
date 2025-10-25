@@ -1,0 +1,25 @@
+Begin
+Create empty dictionary called courses
+	Repeat 
+		Ask user: "Enter course ID (or type done to finish): "
+			Get course_id
+			If course_id equals "done"
+				Exit the loop
+				End IF
+		Ask user: "Enter a subject code to search for example (COS):"
+		Get Subject
+		
+		Display "Courses with subject [subject]:"
+		
+		Set found = False
+		For each course_id, course_name in courses
+			If course_id (coverted to uppercase) starts with subject
+				Display course_id and course_name
+		Set found = True
+		End IF
+		End For
+		
+		IF found = False
+		Display "No courses found for the (subject) subject."
+		End IF
+End 
